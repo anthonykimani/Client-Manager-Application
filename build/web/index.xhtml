@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Client Manager Primefaces</title>
+    </h:head>
+    <h:body  style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; ">
+        <div>
+            <img src="https://www.mspace.co.ke/img/new-mspace-logo.jpeg" style="width:700px;"/>
+        </div>
+        <div class="card" style="border:1px solid lightgray; border-radius: 2px; width: 900px; background-color: transparent; padding:5px; display:flex; justify-content:space-around; align-items: center;">
+            <h:form style="display:flex; flex-direction:column; justify-content: space-around; align-items: center; ">
+                <p:messages id="msgs"/>
+                <div style="width:890px; display:flex; justify-content: space-around; background: rgb(255,255,255);
+                     background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%); border: 1px solid lightgray; border-radius:3px; padding:2px;">::System Login</div>
+
+                <h:panelGrid columns="3" cellpadding="7" styleClass="mb-3">
+                    <p:outputLabel for="username" value="Username:"/>
+                    <p:inputText id="username"  required="false" label="Username" value="#{user.username}">
+                        <f:validateLength minimum="2"/>
+                    </p:inputText>
+                    <!--<p:message for="Username" display="icon"/>-->
+
+                    <p:outputLabel for="password" value="Password:"/>
+                    <p:password id="password" value="#{user.password}" />
+<!--                    <p:inputText id="password" label="Password" required="false">
+                        <f:validateLength minimum="2"/>
+                        <p:ajax update="msgLastname" event="keyup"/>
+                    </p:inputText>-->
+                    <!--<p:message for="password" id="" display="icon"/>-->
+                </h:panelGrid>
+                <p style="color:blue;">Forgot your Password?</p>
+                <div style="display:flex;">
+                    <input type="checkbox"></input>
+                    <p>I agree to the terms and conditions</p>
+                </div>
+                <p:commandButton value="Login" update="@form" action="#{login.authenticateUser()}" style="width:350px; background: rgb(255,255,255);
+                                 background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%); border: 1px solid lightgray; border-radius:3px; padding:2px; color:blue;"/>
+                <div style="display:flex; justify-content: flex-end; width:900px;">
+                    <p:commandButton value="Create New Account" style="width:150px; background: rgb(255,255,255);
+                                     background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%); border: 1px solid lightgray; border-radius:3px; padding:1px; color:blue; font-size: 12px;"/>
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

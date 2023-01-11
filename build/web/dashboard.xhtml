@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>DashBoard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    <div>
+                        <img src="https://www.mspace.co.ke/img/new-mspace-logo.jpeg" style="width:200px;"/>
+
+
+                    </div>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="250" header="Left" collapsible="true">
+                    <ui:insert>
+                        <ui:include src="/MenuItem.xhtml" />
+                    </ui:insert>
+                </p:layoutUnit>
+                <p:layoutUnit position="center">
+                    <ui:insert>
+                        <ui:include src="#{facePainter.page}"  />
+                    </ui:insert>
+                </p:layoutUnit>
+            </p:layout>
+    </h:body>
+</html>

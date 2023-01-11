@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <h:form style="display:flex; flex-direction:column; justify-content:space-around; align-items:center; text-align:start; border:1px solid lightgray; text-align:center;  max-width: 1500px; width:100%;" >
+                <div>
+                    <!--<p:growl  showDetail="true" />-->
+                </div>
+                <h3 style="background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%); max-width: 1500px; width:100%;">ADD USER FORM: AVAILABLE BALANCE : -1</h3>
+                <div style="margin:2px;">
+                    <h:outputLabel for="username" value="Username"/>
+                    <p:inputText id="username"  style="padding: 10px 5px;" />
+                </div>
+
+                <div style="margin:2px;">
+                    <h:outputLabel for="password" value="Password"/>
+                    <p:inputText id="password"  style="padding: 10px 5px;" />
+                </div>
+
+                <div style="margin:2px;">
+                    <h:outputLabel for="sms-credits" value="Sms Credits"/>
+                    <p:inputText id="sms-credits"  style="padding: 10px 5px;" />
+                </div>
+
+                <div style="margin:2px;">
+                    <h:outputLabel for="organisation" value="Organization"/>
+                    <p:inputText id="organisation"  style="padding: 10px 5px;" />
+                </div>
+
+                <div style="margin:2px;">
+                    <h:outputLabel for="user-type" value="User Type"/>
+                    <p:inputText id="user-type"  style="padding: 10px 5px;" />
+                </div>
+
+                <div style="margin:2px;">
+                    <h:outputLabel for="user-mobile" value="User Mobile"/>
+                    <p:inputText id="user-mobile"  style="padding: 10px 5px;" />
+                </div>
+
+                <div style="margin:2px;">
+                    <h:outputLabel for="user-email" value="User Email"/>
+                    <p:inputText id="user-email"  style="padding: 10px 5px;" />
+
+                </div>
+
+                <p:commandButton value="Submit" update="@all" oncomplete="dlg2.close();" style="width:300px;"  />
+
+            </h:form>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <h:form style="display:flex; flex-direction:column; justify-content:space-around; align-items:center; text-align:start; border:1px solid lightgray; text-align:start;  max-width: 1500px; width:100%;" >
+
+
+
+                <h3 style="background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%); max-width: 1500px; width:100%;">ADD USER FORM: AVAILABLE BALANCE : -1</h3>
+                <p:panelGrid columns="2" styleClass="ui-noborder" >
+                    <h:outputLabel for="username" value="Username" style=""/>
+                    <p:inputText id="username"  />
+
+
+
+                    <h:outputLabel for="password" value="Password"/>
+                    <p:inputText id="password"  />
+
+
+
+                    <h:outputLabel for="sms-credits" value="Sms Credits"/>
+                    <p:inputText id="sms-credits"  />
+
+                    <h:outputLabel for="organisation" value="Organization"/>
+                    <p:inputText id="organisation"   />
+
+
+
+                    <h:outputLabel for="user-type" value="User Type"/>
+                    <p:inputText id="user-type" />
+
+
+
+                    <h:outputLabel for="user-mobile" value="User Mobile"/>
+                    <p:inputText id="user-mobile"  />
+
+
+                    <h:outputLabel for="user-email" value="User Email"/>
+                    <p:inputText id="user-email"   />
+                </p:panelGrid>
+
+
+                <p:panelGrid columns="1" styleClass="ui-noborder" style="margin:5px;">
+                    <p:commandButton value="Submit" update="@all" oncomplete="dlg2.close();" style="width:300px;"  />
+                </p:panelGrid>
+
+            </h:form>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div class="card">
+            <h:form>
+                <p:growl>
+                    <!--<p:autoUpdate/>-->
+                </p:growl>
+
+                <p:panelMenu style="width:400px">
+                    <p:submenu label="Manage User Details" style=" background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%);">
+                        <p:menuitem value="Add SMS User"
+                                    icon="pi pi-user-plus" action="#{navigator.addSmsUser()}" ajax="false"/>
+                        <p:menuitem value="Add Email User" icon="pi pi-user-edit" ajax="false" action="#{navigator.addEmailUser()}"/>
+                        <p:menuitem value="View Email User"  icon="pi pi-users" ajax="false" action="#{navigator.viewEmailUser()}"/>
+                        <p:menuitem value="View SMS User"  icon="pi pi-users"/>
+                        <p:menuitem value="View Alphanumerics"  icon="pi pi-users"/>
+                    </p:submenu>
+                    <p:submenu label="Manage Re-sellers"  style=" background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%);">
+                        <p:menuitem value="Add Reseller"  icon="pi pi-plus"/>
+                        <p:menuitem value="Manage Reseller"  icon="pi pi-sliders-v"/>
+                    </p:submenu>
+                    <p:submenu label="MspacePESA"  style=" background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%);">
+                        <p:menuitem value="Add Till/Paybill"  icon="pi pi-money-bill"/>
+                        <p:menuitem value="View Till/Paybill"  icon="pi pi-wallet"/>
+                    </p:submenu>
+                    <p:submenu label="Shared USSD"  style=" background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%);">
+                        <p:menuitem value="Add Callback"  icon="pi pi-plus"/>
+                        <p:menuitem value="View Callbacks"  icon="pi pi-sliders-v"/>
+                    </p:submenu>
+                    <p:submenu label="Summary and Reports"  style=" background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%);">
+                        <p:menuitem value="SMS Out Report"  icon="pi pi-plus"/>
+                        <p:menuitem value="Bulky Reports"  icon="pi pi-sliders-v"/>
+                        <p:menuitem value="SMPP Report"  icon="pi pi-sliders-v"/>
+                        <p:menuitem value="Opt Out Report"  icon="pi pi-sliders-v"/>
+                        <p:menuitem value="Credit History Report"  icon="pi pi-sliders-v"/>
+                        <p:menuitem value="Single User Visual Report"  icon="pi pi-sliders-v"/>
+                        <p:menuitem value="All User Visual Report"  icon="pi pi-sliders-v"/>
+                    </p:submenu>
+                </p:panelMenu>
+            </h:form>
+        </div>
+    </body>
+</html>
