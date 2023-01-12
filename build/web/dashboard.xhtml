@@ -18,11 +18,11 @@ and open the template in the editor.
     <h:body>
         <p:layout fullPage="true">
 
-            <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+            <p:layoutUnit position="north" size="150" resizable="true" closable="true" collapsible="true">
                 <p:panelGrid columns="3" style="width:100%;" styleClass="ui-noborder" >
 
-                    <h:outputText value="Welcome"/>
-                    <h:graphicImage value="../web/assets/mspace-logo.jpeg" />
+                    <h:outputText value="Welcome #{user.getUsername()}"/>
+                    <h:graphicImage  url="/images/mspace-logo.jpeg" width="300" />
                     
                     <p:commandButton value="Logout"  style="width:150px; background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%); border: 1px solid lightgray; border-radius:3px; padding:2px; color:blue;"/>
 
