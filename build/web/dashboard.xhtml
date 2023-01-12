@@ -18,28 +18,34 @@ and open the template in the editor.
     <h:body>
         <p:layout fullPage="true">
 
-                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-                    <div>
-                        <img src="https://www.mspace.co.ke/img/new-mspace-logo.jpeg" style="width:200px;"/>
+            <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                <p:panelGrid columns="3" style="width:100%;" styleClass="ui-noborder" >
 
+                    <h:outputText value="Welcome"/>
+                    <h:graphicImage value="../web/assets/mspace-logo.jpeg" />
+                    
+                    <p:commandButton value="Logout"  style="width:150px; background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%); border: 1px solid lightgray; border-radius:3px; padding:2px; color:blue;"/>
 
-                    </div>
-                </p:layoutUnit>
+                    <p:commandButton value="Switch To" style="width:150px; background: rgb(255,255,255); background: linear-gradient( rgba(255,255,255,1) 0%, rgba(214,214,214,0.9920343137254902) 100%); border: 1px solid lightgray; border-radius:3px; padding:2px; color:blue;"/>
+                </p:panelGrid>
+            </p:layoutUnit>
 
-                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
-                    Footer
-                </p:layoutUnit>
+            <p:layoutUnit position="south" size="100" closable="true" collapsible="true" style="display:flex;">
+                <h:outputText value="#{datetime.getYear()}" />
+                <a href="https://www.mspace.co.ke/">Mspace solutions LTD</a>
+            </p:layoutUnit>
 
-                <p:layoutUnit position="west" size="250" header="Left" collapsible="true">
-                    <ui:insert>
-                        <ui:include src="/MenuItem.xhtml" />
-                    </ui:insert>
-                </p:layoutUnit>
-                <p:layoutUnit position="center">
-                    <ui:insert>
-                        <ui:include src="#{facePainter.page}"  />
-                    </ui:insert>
-                </p:layoutUnit>
-            </p:layout>
+            <p:layoutUnit position="west" size="250" header="Left" collapsible="true">
+                <ui:insert>
+                    <ui:include src="/MenuItem.xhtml" />
+                </ui:insert>
+            </p:layoutUnit>
+            <p:layoutUnit position="center">
+                <ui:insert>
+                    <ui:include src="#{facePainter.page}"  />
+                </ui:insert>
+            </p:layoutUnit>
+        </p:layout>
+
     </h:body>
 </html>

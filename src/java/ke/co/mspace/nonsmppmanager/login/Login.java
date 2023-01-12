@@ -44,7 +44,7 @@ public class Login {
         return "dashboard.xhtml";
     }
 
-    public String authenticateUser() {
+    public String authenticateUser(){
         String username = null;
         String password = null;
         connection = database.getConnection();
@@ -57,6 +57,7 @@ public class Login {
             while (result.next()) {
                 username = result.getString("username");
                 password = result.getString("password");
+                System.out.println(username);
             }
             System.out.println("query done:");
             System.out.println(result);
@@ -64,14 +65,14 @@ public class Login {
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if ("NULL".equals(username) && "NULL".equals(password)) {
-            System.out.println(username);
-            System.out.println(password);
-            return "index.xthml";
-        } else {
+        if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
             System.out.println(username);
             System.out.println(password);
             return "dashboard.xhtml";
+        } else {
+            System.out.println(username);
+            System.out.println(password);
+            return "index.xhtml";
         }
     }
 
